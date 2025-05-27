@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Profile</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      background-color: #0e0e0e;
+      font-family: 'Poppins', sans-serif;
+    }
+    .logout-link {
+      position: fixed;
+      top: 1rem;
+      left: 1rem;
+      color: rgb(0, 0, 0);
+      background: rgba(255, 251, 251, 0.989);
+      font-size: 1.8rem;
+      z-index: 1000;
+      transition: color 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 2.8rem;
+      height: 2.8rem;
+      border-radius: 0.5rem;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 0 8px rgba(255, 252, 252, 0.3);
+    }
+    .logout-link:hover {
+      color: #ffffffcc;
+      background: rgba(79, 80, 81, 0.747);
+      transform: scale(1.2);
+      box-shadow: 0 0 12px rgba(255 255 255 / 0.7);
+    }
+  </style>
+</head>
+<body class="text-white">
+
+  <!-- Tombol Logout -->
+  <a href="../index.html" class="logout-link" aria-label="Logout" title="Logout">
+    <!-- Icon Logout simple (arrow out) -->
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" width="24" height="24">
+      <path d="M16 13v-2H7V8l-5 4 5 4v-3zM19 19h-6v-2h6V7h-6V5h6a2 2 0 012 2v10a2 2 0 01-2 2z"/>
+    </svg>
+  </a>
+
+  <!-- My Profile Section -->
+  <section id="my-profile" class="py-16 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold mb-6 relative inline-block">
+        My Profile
+        <span class="block w-24 h-1 bg-blue-500 mx-auto mt-2"></span>
+      </h2>
+
+      <div class="bg-gray-700 rounded-2xl shadow-lg p-8 md:p-12 grid md:grid-cols-2 gap-8 mt-8">
+        <!-- Foto Profil -->
+        <div class="flex justify-center items-center relative">
+          <img src="image/profil.jpeg" alt="Fajar Sarwono" class="w-40 h-40 rounded-full object-cover border-4 border-blue-500 shadow-md" />
+        </div>
+
+        <!-- Data Diri -->
+        <div class="text-left space-y-4">
+          <p><span class="font-semibold text-blue-400">Name:</span> Fajar Sarwono</p>
+          <p><span class="font-semibold text-blue-400">Age:</span> 16</p>
+          <p><span class="font-semibold text-blue-400">Profession:</span> Full-Stack Developer</p>
+          <p><span class="font-semibold text-blue-400">Location:</span> Region Indonesia</p>
+          <p><span class="font-semibold text-blue-400">Email:</span> fajarsarwono@email.com</p>
+
+          <!-- Skill Icons -->
+          <div class="flex flex-wrap gap-4 pt-4">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-8 h-8" alt="HTML" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-8 h-8" alt="CSS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-8 h-8" alt="JavaScript" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/bootstrap/bootstrap-original.svg" class="w-8 h-8" alt="Bootstrap" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/tailwindcss.svg" class="w-8 h-8 fill-current text-sky-400" alt="Tailwind CSS" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-8 h-8" alt="React" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nextjs/nextjs-original.svg" class="w-8 h-8 bg-white rounded-full p-1" alt="Next.js" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-8 h-8" alt="Node.js" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/php/php-original.svg" class="w-8 h-8" alt="PHP" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/laravel.svg" class="w-8 h-8 fill-current text-red-600" alt="Laravel" />
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" class="w-8 h-8" alt="MySQL" />
+            <img src="https://cdn.jsdelivr.net/npm/simple-icons@v9/icons/github.svg" class="w-8 h-8 fill-current text-white" alt="GitHub" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

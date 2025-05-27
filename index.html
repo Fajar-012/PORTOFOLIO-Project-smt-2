@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Navbar Fixed & Hero</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+     <link rel="stylesheet" href="portofolio/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"rel="stylesheet"/>
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.92/build/spline-viewer.js"
+    ></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer"/>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+  </head>
+ <body >
+
+  
+   <!-- NAVBAR -->
+ <nav class="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-90 backdrop-blur-md">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center justify-between h-16">
+      <!-- Logo -->
+      <button class="button1">
+        <span class="actual-text">&nbsp;Dexter&nbsp;</span>
+        <span aria-hidden="true" class="front-text">&nbsp;Dexter&nbsp;</span>
+      </button>
+
+      <!-- Desktop Menu -->
+      <ul class="hidden sm:flex space-x-8 font-semibold text-sm mx-auto select-none">
+        <li><a href="#home" class="rotate-boorder-2 active">Home</a></li>
+        <li><a href="#about" class="rotate-boorder-2">About</a></li>
+        <li><a href="#services" class="rotate-boorder-2">Services</a></li>
+        <li><a href="#project" class="rotate-boorder-2">Projects</a></li>
+        <li><a href="#contact" class="rotate-boorder-2">Contact</a></li>
+      </ul>
+
+      <!-- Profile Icon -->
+      <a href="profil.html" class="hidden sm:flex items-center space-x-2 select-none">
+        <div class="w-10 h-10 bg-white rounded-md flex items-center justify-center shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6 text-black" fill="none"
+            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <path stroke-linecap="round" stroke-linejoin="round"
+              d="M5.121 17.804A7.5 7.5 0 0112 15a7.5 7.5 0 016.879 2.804M15 10a3 3 0 11-6 0 3 3 0 016 0z" />
+          </svg>
+        </div>
+      </a>
+
+      <!-- Mobile Hamburger -->
+      <div class="flex sm:hidden items-center">
+        <button id="menu-btn" class="relative w-8 h-8 flex flex-col justify-between items-center group z-50">
+          <span class="block w-full h-0.5 bg-white transition-transform duration-300 ease-in-out origin-left"></span>
+          <span class="block w-full h-0.5 bg-white transition-all duration-300 ease-in-out"></span>
+          <span class="block w-full h-0.5 bg-white transition-transform duration-300 ease-in-out origin-left"></span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden sm:hidden bg-black bg-opacity-90 backdrop-blur-md px-6 py-4 space-y-4 text-center select-none">
+    <a href="#home" class="block rotate-boorder-2">Home</a>
+    <a href="#about" class="block rotate-boorder-2">About</a>
+    <a href="#services" class="block rotate-boorder-2">Services</a>
+    <a href="#project" class="block rotate-boorder-2">Projects</a>
+    <a href="#contact" class="block rotate-boorder-2">Contact</a>
+  </div>
+</nav>
+
+  <!-- HERO -->
+  <section id="home" class="w-full min-h-screen flex flex-col-reverse md:flex-row items-center justify-between px-6 md:px-16 pt-24 md:pt-0 bg-black text-white overflow-hidden" >
+    
+    <!-- Text Content -->
+   <div class="text-Poppins w-full md:w-1/2 text-center md:text-left space-y-6 z-10 mt-6 md:mt-0">
+    <h1 class="text-2xl sm:text-3xl md:text-5xl font-extrabold leading-tight drop-shadow-md">
+      <span class="animated-gradient-text">Full-Stack Developer</span> <br/>
+      Build Functional & Beautiful Web Experiences
+    </h1>
+    <p class="mt-4 text-base sm:text-lg md:text-xl text-gray-300 font-medium drop-shadow">
+      Specializing in frontend aesthetics and backend logic that scales.
+    </p>
+   <div class="flex justify-center md:justify-start space-x-4 mt-6 md:mt-8 mb-10">
+  <!-- Tombol download sebagai link -->
+  <a href="portofolio/cv.html" class="button2 relative inline-block">
+    <div class="blob1 absolute inset-0"></div>
+    <div class="blob2 absolute inset-0"></div>
+    <div class="inner relative z-10">Download CV</div>
+  </a>
+</div>
+
+  </div>
+
+    <!-- Spline Viewer -->
+<div class="w-full md:w-1/2 h-[calc(100vh-64px)] flex items-center justify-center pointer-events-none z-0"
+>
+  <div class="transform scale-[0.65] origin-center">
+    <spline-viewer
+      url="https://prod.spline.design/zXlYazSiOR4BCbsi/scene.splinecode"
+      style="width: 1700px; height: 900px;"
+    ></spline-viewer>
+  </div>
+</div>
+  </section>
+
+  
+
+
+
+ <section id="about" class="py-20 bg-black text-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <!-- Judul -->
+    <div class="text-center mb-16" data-aos="fade-down">
+      <h2 class="font-bold text-4xl md:text-5xl text-white">
+        About <span class="text-[#4169E1]">Me</span>
+      </h2>
+    </div>
+
+    <!-- Konten Utama -->
+    <div class="flex flex-col lg:flex-row items-center justify-center gap-[9rem]">
+      
+      <!-- Kartu Profil Flip -->
+      <div class="w-[320px] h-[390px] perspective" data-aos="fade-right">
+        <div class="relative w-full h-full transition-transform duration-700 transform-style preserve-3d group hover:rotate-y-180">
+          
+          <!-- Depan -->
+          <div class="absolute w-full h-full backface-hidden rounded-3xl overflow-hidden shadow-2xl bg-zinc-800">
+            <img
+              src="portofolio/image/profil.jpeg"
+              alt="Profile"
+              class="w-full h-full object-cover"
+            />
+          </div>
+
+          <!-- Belakang -->
+          <div class="absolute w-full h-full backface-hidden rotate-y-180 bg-zinc-800 rounded-3xl shadow-2xl flex flex-col items-center justify-center px-4 text-center">
+            <h3 class="text-2xl font-bold mb-1">Dexter</h3>
+            <p class="text-lg mb-1 text-gray-200">Full-Stack Developer</p>
+            <p class="text-sm text-gray-400 mb-4">Age: 16</p>
+            
+            <!-- Icon Skill -->
+            <div class="flex flex-wrap justify-center gap-3 mb-4">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" class="w-6 h-6" />
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg" class="w-6 h-6" />
+            </div>
+
+            <p class="text-xs text-gray-500">Hover to flip back</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Deskripsi Diri -->
+      <div class="max-w-lg text-center lg:text-left" data-aos="fade-left">
+        <h3 class="text-3xl font-bold mb-3">Hi, I'm Fajar Farwono</h3>
+        <p class="text-xl text-gray-300 mb-4">Passionate Full-Stack Web Developer</p>
+        <p class="text-gray-400 leading-relaxed mb-6">
+          I craft seamless, responsive, and beautiful web apps. From UI/UX
+          design to backend logic and database handling — I build reliable
+          and engaging web solutions for modern needs.
+        </p>
+
+        <!-- Media Sosial -->
+        <div class="flex justify-center lg:justify-start gap-8 text-3xl mb-6">
+          <!-- WhatsApp -->
+          <a href="https://wa.me/6285725778419" class="text-gray-300 hover:text-[#25D366] transition duration-300 ease-in-out relative group">
+            <i class="fab fa-whatsapp"></i>
+            <span class="absolute inset-0 rounded-full blur-sm opacity-0 group-hover:opacity-60 bg-[#25D366]"></span>
+          </a>
+
+          <!-- Instagram -->
+          <a href="https://instagram.com/fajar.9677" class="text-gray-300 hover:text-pink-400 transition duration-300 ease-in-out relative group"
+             style="--instagram-gradient: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);">
+            <i class="fab fa-instagram"></i>
+            <span class="absolute inset-0 rounded-full blur-sm opacity-0 group-hover:opacity-60" style="background: var(--instagram-gradient)"></span>
+          </a>
+
+          <!-- TikTok -->
+          <a href="https://www.tiktok.com/@f................8" class="text-gray-300 hover:text-[#69C9D0] transition duration-300 ease-in-out relative group">
+            <i class="fab fa-tiktok"></i>
+            <span class="absolute inset-0 rounded-full blur-sm opacity-0 group-hover:opacity-60 bg-white"></span>
+          </a>
+        </div>
+
+        <!-- Tombol Learn More -->
+        <div class="button-lmp cursor-pointer" onclick="window.location.href='portofolio/cv.html'">
+  <input id="btn-light" name="btn-light" type="checkbox" checked class="hidden" />
+  <div class="socket"></div>
+  <div class="light-bulb flex items-center space-x-2">
+    <svg fill="none" viewBox="0 0 131 151" width="22" class="stroke-current">
+      <path
+        stroke-width="8"
+        d="M1.00043 50.4999C80.0004 57.4999 102 50.4999 102 50.4999C102 50.4999 125 45.9999 127 31.4999C129 16.9998 115 1.49988 107.5 3.49988C100 5.49988 83.5004 16.9999 83.5004 75.4999C83.5004 83.9786 83.8466 91.4701 84.4622 98.0884M1 100.5C43.5028 96.7338 69.5067 97.0201 84.4622 98.0884M84.4622 98.0884C97.3045 99.0058 102 100.5 102 100.5C102 100.5 125 105 127 119.5C129 134 115 149.5 107.5 147.5C101.087 145.79 88.0938 137.134 84.4622 98.0884Z"
+      ></path>
+    </svg>
+    <p class="text-light-bulb select-none"> View CV </p>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Services Section -->
+<section id="services" class="min-h-screen px-5 py-20 md:px-20 bg-black text-white relative z-10">
+  <!-- Judul -->
+  <div class="text-center mb-10">
+    <h2 data-aos="fade-down" class="font-bold text-4xl md:text-5xl mb-2 text-white">
+      My <span class="text-[#4169E1]">Services</span>
+    </h2>
+    <p data-aos="fade-up" data-aos-delay="200" class="max-w-xl mx-auto text-gray-300 text-base md:text-lg">
+    As a Full-Stack Developer, I provide efficient, modern, and scalable end-to-end solutions.
+    </p>
+  </div>
+
+  <!-- Kartu Layanan -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-8">
+    <!-- Frontend Card -->
+    <div data-aos="fade-up" data-aos-delay="100"
+      class="bg-[#0d1117] border border-gray-800 shadow-[0_0_10px_2px_rgba(255,255,255,0.3)] rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_#4169E1]">
+      <div class="text-sky-400 mb-4">
+        <i data-lucide="monitor" class="w-12 h-12"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Frontend Development</h3>
+      <p class="text-gray-400">Building responsive UI with React, Tailwind, and animations.</p>
+    </div>
+
+    <!-- Backend Card -->
+    <div data-aos="fade-up" data-aos-delay="200"
+      class="bg-[#0d1117] border border-gray-800 shadow-[0_0_10px_2px_rgba(255,255,255,0.3)] rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_#4169E1]">
+      <div class="text-sky-400 mb-4">
+        <i data-lucide="server" class="w-12 h-12"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Backend Development</h3>
+      <p class="text-gray-400">RESTful APIs using Node.js, Express, and secure data handling.</p>
+    </div>
+
+    <!-- Database Card -->
+    <div data-aos="fade-up" data-aos-delay="300"
+      class="bg-[#0d1117] border border-gray-800 shadow-[0_0_10px_2px_rgba(255,255,255,0.3)] rounded-2xl p-6 flex flex-col items-center text-center transition-all duration-300 transform hover:scale-105 hover:shadow-[0_0_20px_#4169E1]">
+      <div class="text-sky-400 mb-4">
+        <i data-lucide="database" class="w-12 h-12"></i>
+      </div>
+      <h3 class="text-xl font-semibold mb-2">Database Integration</h3>
+      <p class="text-gray-400">Efficient and secure databases using MongoDB, MySQL, PostgreSQL.</p>
+    </div>
+  </div>
+</section>
+
+
+<section class="progresbar">
+  <h2 data-aos="fade-down" class="text-center font-bold text-4xl md:text-5xl mb-2 text-white">
+    My <span class="text-[#4169E1]">skills</span>
+  </h2>
+  <p data-aos="fade-up" data-aos-delay="200" class="text-center max-w-xl mx-auto text-gray-300 text-base md:text-lg mb-5">
+    These are the programming languages I’m proficient in.
+  </p>
+
+  <!-- Baris pertama -->
+  <div class="container-pgs">
+    <div class="card-pb" data-aos="fade-left" data-aos-delay="0" style="--clr:#0798f8;--num:85">
+      <!-- React -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>85<span>%</span></div>
+          <p>React</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg" alt="React" class="logo-bw" />
+    </div>
+
+    <div class="card-pb" data-aos="fade-right" data-aos-delay="100" style="--clr:#099c33;--num:70">
+      <!-- Node.js -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>70<span>%</span></div>
+          <p>Node.js</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg" alt="Node.js" class="logo-bw" />
+    </div>
+
+    <div class="card-pb" data-aos="fade-left" data-aos-delay="200" style="--clr:#f5e423;--num:90">
+      <!-- JavaScript -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>90<span>%</span></div>
+          <p>JavaScript</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png" alt="JavaScript" class="logo-bw" />
+    </div>
+
+    <div class="card-pb" data-aos="fade-right" data-aos-delay="300" style="--clr:#0428c7;--num:80">
+      <!-- CSS -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>80<span>%</span></div>
+          <p>CSS</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/6/62/CSS3_logo.svg" alt="CSS" class="logo-bw" />
+    </div>
+
+    <div class="card-pb" data-aos="fade-left" data-aos-delay="400" style="--clr:#314c69;--num:60">
+      <!-- Tailwind -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>60<span>%</span></div>
+          <p>Tailwind</p>
+        </div>
+      </div>
+      <img src="https://cdn.worldvectorlogo.com/logos/tailwind-css-2.svg" alt="Tailwind CSS" class="logo-bw" />
+    </div>
+  </div>
+
+  <!-- Baris kedua -->
+  <div class="container-pgs center-row">
+    <div class="card-pb" data-aos="fade-right" data-aos-delay="0" style="--clr:#563d7c;--num:75">
+      <!-- Bootstrap -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>75<span>%</span></div>
+          <p>Bootstrap</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Bootstrap_logo.svg" alt="Bootstrap" class="logo-bw" />
+    </div>
+
+    <div class="card-pb" data-aos="fade-left" data-aos-delay="100" style="--clr:#f24e1e;--num:70">
+      <!-- Figma -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>70<span>%</span></div>
+          <p>Figma</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/3/33/Figma-logo.svg" alt="Figma" class="logo-bw" />
+    </div>
+
+    <div class="card-pb" data-aos="fade-right" data-aos-delay="200" style="--clr:#00758f;--num:65">
+      <!-- MySQL -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>65<span>%</span></div>
+          <p>MySQL</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/en/d/dd/MySQL_logo.svg" alt="MySQL" class="logo-bw" />
+    </div>
+
+    <div class="card-pb" data-aos="fade-left" data-aos-delay="300" style="--clr:#8492a6;--num:70">
+      <!-- PHP -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>70<span>%</span></div>
+          <p>PHP</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/2/27/PHP-logo.svg" alt="PHP" class="logo-bw" />
+    </div>
+
+    <div class="card-pb" data-aos="fade-right" data-aos-delay="400" style="--clr:#42b883;--num:75">
+      <!-- Vue.js -->
+      <div class="percent--">
+        <div class="dot"></div>
+        <svg>
+          <circle r="70" cy="70" cx="70"></circle>
+          <circle r="70" cy="70" cx="70"></circle>
+        </svg>
+        <div class="number-">
+          <div>75<span>%</span></div>
+          <p>Vue.js</p>
+        </div>
+      </div>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Vue.js_Logo_2.svg" alt="Vue.js" class="logo-bw" />
+    </div>
+  </div>
+</section>
+
+
+<section class="mt-10 bg-black min-h-screen py-12" id="project">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="mb-6 text-4xl sm:text-5xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-500 to-indigo-600 drop-shadow-xl">
+        My <span class="text-[#3B82F6]">Projects</span>
+      </h2>
+      <p class="text-gray-300 text-lg sm:text-xl leading-relaxed max-w-xl mx-auto">
+        Some featured projects I've built with care and creativity.
+      </p>
+    </div>
+
+    <!-- Navbar Kategori -->
+    <nav class="mb-8 flex flex-wrap justify-center gap-2 text-sm sm:text-base max-w-4xl mx-auto w-full" data-aos="fade-up" data-aos-delay="100">
+      <button class="kategori-btn px-4 py-2 rounded-full border border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition duration-300 active:bg-[#3B82F6]" data-filter="all">Semua</button>
+      <button class="kategori-btn px-4 py-2 rounded-full border border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition duration-300" data-filter="ecommerce">E-Commerce</button>
+      <button class="kategori-btn px-4 py-2 rounded-full border border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition duration-300" data-filter="hospital">Hospital</button>
+      <button class="kategori-btn px-4 py-2 rounded-full border border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition duration-300" data-filter="travel">Travel</button>
+      <button class="kategori-btn px-4 py-2 rounded-full border border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition duration-300" data-filter="blog">Blog</button>
+      <button class="kategori-btn px-4 py-2 rounded-full border border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition duration-300" data-filter="portfolio">Portfolio</button>
+      <button class="kategori-btn px-4 py-2 rounded-full border border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white transition duration-300" data-filter="art">Ramadan</button>
+    </nav>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- CARD 1 - E-Commerce -->
+      <div class="project-card group relative w-full aspect-video overflow-hidden rounded-xl border border-[#3B82F6] shadow-[0_0_10px_#3B82F6] hover:shadow-[0_0_25px_#3B82F6] transition duration-500 bg-black" data-category="ecommerce" data-aos="fade-up">
+        <img src="portofolio/image/ecomerc.png" alt="E-Commerce Website" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-4 text-center px-4">
+          <h2 class="text-white text-xl font-semibold">🛒 E-Commerce Website</h2>
+          <button
+            class="text-white border border-white px-5 py-2 rounded hover:bg-white hover:text-black transition"
+            data-modal-target="modal1"
+            data-modal-image="portofolio/image/ecomerc.png"
+            data-modal-title="🛒 E-Commerce Website"
+            data-modal-description="Shop everything you need with a smooth and secure experience."
+            data-modal-github="https://github.com/Fajar-012/ecomerc.git"
+            data-modal-demo="https://fajar-012.github.io/ecomerc/">
+            Open View
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 2 - Portfolio -->
+      <div class="project-card group relative w-full aspect-video overflow-hidden rounded-xl border border-[#3B82F6] shadow-[0_0_10px_#3B82F6] hover:shadow-[0_0_25px_#3B82F6] transition duration-500 bg-black" data-category="portfolio" data-aos="fade-up" data-aos-delay="100">
+        <img src="portofolio/image/portofolio.png" alt="Portfolio Website" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-4 text-center px-4">
+          <h2 class="text-white text-xl font-semibold">👨‍💻 Portfolio Website</h2>
+          <button
+            class="text-white border border-white px-5 py-2 rounded hover:bg-white hover:text-black transition"
+            data-modal-target="modal2"
+            data-modal-image="portofolio/image/portofolio.png"
+            data-modal-title="👨‍💻 Portfolio Website"
+            data-modal-description="A sleek portfolio to showcase skills and projects."
+            data-modal-github="https://github.com/Fajar-012/portofolio.git"
+            data-modal-demo="">
+            Open View
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 3 - Blog -->
+      <div class="project-card group relative w-full aspect-video overflow-hidden rounded-xl border border-[#3B82F6] shadow-[0_0_10px_#3B82F6] hover:shadow-[0_0_25px_#3B82F6] transition duration-500 bg-black" data-category="blog" data-aos="fade-up" data-aos-delay="200">
+        <img src="portofolio/image/blog.png" alt="Blog Website" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-4 text-center px-4">
+          <h2 class="text-white text-xl font-semibold">✍️ Website Berita </h2>
+          <button
+            class="text-white border border-white px-5 py-2 rounded hover:bg-white hover:text-black transition"
+            data-modal-target="modal3"
+            data-modal-image="portofolio/image/blog.png"
+            data-modal-title="✍️ Blog Website"
+            data-modal-description="Sharing thoughts and tutorials with a modern blog."
+            data-modal-github="https://github.com/Fajar-012/blog.git"
+            data-modal-demo="https://fajar-012.github.io/blog/">
+            Open View
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 4 - Ramadan -->
+      <div class="project-card group relative w-full aspect-video overflow-hidden rounded-xl border border-[#3B82F6] shadow-[0_0_10px_#3B82F6] hover:shadow-[0_0_25px_#3B82F6] transition duration-500 bg-black" data-category="art" data-aos="fade-up" data-aos-delay="300">
+        <img src="portofolio/image/ramadan.png" alt="Ramadan Website" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-4 text-center px-4">
+          <h2 class="text-white text-xl font-semibold">Ramadhan Website</h2>
+          <button
+            class="text-white border border-white px-5 py-2 rounded hover:bg-white hover:text-black transition"
+            data-modal-target="modal4"
+            data-modal-image="portofolio/image/ramadan.png"
+            data-modal-title="Ramadhan"
+            data-modal-description="Real-time chatting app with secure messaging."
+            data-modal-github="https://github.com/Fajar-012/ramadan.git"
+            data-modal-demo="https://chatapp-demo.vercel.app">
+            Open View
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 5 - Hospital -->
+      <div class="project-card group relative w-full aspect-video overflow-hidden rounded-xl border border-[#3B82F6] shadow-[0_0_10px_#3B82F6] hover:shadow-[0_0_25px_#3B82F6] transition duration-500 bg-black" data-category="hospital" data-aos="fade-up" data-aos-delay="400">
+        <img src="portofolio/image/hospital.png" alt="Hospital Website" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-4 text-center px-4">
+          <h2 class="text-white text-xl font-semibold">🏥 Hospital Website</h2>
+          <button
+            class="text-white border border-white px-5 py-2 rounded hover:bg-white hover:text-black transition"
+            data-modal-target="modal5"
+            data-modal-image="portofolio/image/hospital.png"
+            data-modal-title="🏥 Hospital"
+            data-modal-description="Organize tasks and improve productivity."
+            data-modal-github="https://github.com/Fajar-012/hospital.git"
+            data-modal-demo="">
+            Open View
+          </button>
+        </div>
+      </div>
+
+      <!-- CARD 6 - Travel -->
+      <div class="project-card group relative w-full aspect-video overflow-hidden rounded-xl border border-[#3B82F6] shadow-[0_0_10px_#3B82F6] hover:shadow-[0_0_25px_#3B82F6] transition duration-500 bg-black" data-category="travel" data-aos="fade-up" data-aos-delay="500">
+        <img src="portofolio/image/travel.png" alt="Travel Website" class="absolute inset-0 w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" />
+        <div class="absolute inset-0 bg-black bg-opacity-60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col items-center justify-center space-y-4 text-center px-4">
+          <h2 class="text-white text-xl font-semibold">✈️ Travel Website</h2>
+          <button
+            class="text-white border border-white px-5 py-2 rounded hover:bg-white hover:text-black transition"
+            data-modal-target="modal6"
+            data-modal-image="portofolio/image/travel.png"
+            data-modal-title="✈️ Travel Website"
+            data-modal-description="Explore new destinations with beautiful design."
+            data-modal-github="https://github.com/Fajar-012/travel.git"
+            data-modal-demo="">
+            Open View
+          </button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+
+   <!-- MODAL -->
+  <div id="modal"
+    class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center opacity-0 pointer-events-none transition-opacity duration-300 z-50 px-4" >
+    <div
+      class="bg-gray-900 rounded-lg max-w-md w-full p-6 relative shadow-xl border border-indigo-600 text-white">
+      <img id="modal-image" src="" alt="Project Image"
+        class="w-full h-48 object-cover rounded mb-4" />
+      <h2 id="modal-title" class="text-2xl font-bold text-indigo-400 mb-2">Title</h2>
+      <p id="modal-desc" class="text-gray-300 mb-4">Description</p>
+
+      <div class="mb-4">
+        <h3 class="font-semibold mb-1 text-indigo-300">Languages Used:</h3>
+        <ul class="list-disc list-inside text-indigo-200 text-sm">
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>JavaScript</li>
+        </ul>
+      </div>
+
+      <div
+        class="flex flex-col sm:flex-row sm:justify-start gap-3 sm:items-center space-x-0 sm:space-x-4">
+        <a id="modal-github-link" href="#" target="_blank"
+          class="inline-flex items-center justify-center bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition w-full sm:w-auto">
+          <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+            <path
+              d="M12 0C5.37 0 0 5.373 0 12a12 12 0 008.21 11.385c.6.11.82-.26.82-.577 0-.285-.01-1.04-.015-2.042-3.338.726-4.042-1.61-4.042-1.61-.547-1.392-1.335-1.762-1.335-1.762-1.09-.745.082-.73.082-.73 1.205.085 1.84 1.24 1.84 1.24 1.07 1.835 2.805 1.305 3.49.997.11-.776.42-1.305.76-1.605-2.665-.304-5.466-1.335-5.466-5.933 0-1.31.47-2.38 1.24-3.22-.124-.303-.536-1.523.118-3.176 0 0 1.01-.322 3.3 1.23a11.5 11.5 0 016 0c2.28-1.552 3.29-1.23 3.29-1.23.656 1.653.244 2.873.12 3.176.77.84 1.24 1.91 1.24 3.22 0 4.61-2.805 5.626-5.475 5.922.43.372.82 1.103.82 2.222 0 1.606-.015 2.903-.015 3.296 0 .32.21.694.825.576A12 12 0 0024 12c0-6.627-5.373-12-12-12z" />
+          </svg>
+          GitHub
+        </a>
+        <a id="modal-demo-link" href="../portofolio/index.html" target="_blank"
+          class="inline-flex items-center justify-center bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 transition w-full sm:w-auto">
+          <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path d="M14 3l7 7m0 0l-7 7m7-7H3" />
+          </svg>
+          Live Demo
+        </a>
+      </div>
+
+      <button id="modal-close"
+        class="absolute top-2 right-3 text-indigo-300 hover:text-indigo-500 text-3xl font-bold">&times;</button>
+    </div>
+  </div>
+</section>
+
+<div class="py-10 bg-black">
+  <div class="container flex flex-col items-center justify-center w-full px-6 mx-auto text-center xl:px-0">
+    <h2 class="font-heading mb-4 font-bold tracking-tight text-white text-3xl sm:text-5xl">
+      Testimonials From our <span class="text-[#4169E1]">Customers</span>
+    </h2>
+    <p class="max-w-2xl py-4 text-lg leading-normal text-gray-400 lg:text-xl xl:text-xl">
+      Testimonials are a great way to increase brand trust and awareness. Use this section to highlight your popular customers.
+    </p>
+  </div>
+
+  <div class="container px-6 mx-auto mt-10 xl:px-0">
+    <div class="grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+      
+      <!-- Card -->
+      <div class="flex flex-col justify-between h-full p-6 bg-[#111] rounded-xl border border-gray-700 hover:border-indigo-500 transition">
+        <p class="text-base leading-relaxed text-gray-300">
+          Share a <mark class="px-1 text-indigo-300 bg-indigo-800 rounded-md ring-1 ring-indigo-600">testimonial</mark>
+          that hits some of your benefits from one of your popular customers.
+        </p>
+        <div class="flex items-center mt-6 space-x-3">
+          <div class="flex-shrink-0 overflow-hidden rounded-full w-10 h-10">
+            <img alt="Avatar" src="https://images.unsplash.com/photo-1511485977113-f34c92461ad9?w=100&h=100&crop=faces" loading="lazy" />
+          </div>
+          <div>
+            <div class="text-sm font-medium text-white">Sarah Steiner</div>
+            <div class="text-xs text-gray-400">VP Sales at Google</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Repeat for other cards... -->
+      <div class="flex flex-col justify-between h-full p-6 bg-[#111] rounded-xl border border-gray-700 hover:border-indigo-500 transition">
+        <p class="text-base leading-relaxed text-gray-300">
+          Make sure you only pick the <mark class="px-1 text-indigo-300 bg-indigo-800 rounded-md ring-1 ring-indigo-600">right sentence</mark>
+          to keep it short and simple.
+        </p>
+        <div class="flex items-center mt-6 space-x-3">
+          <div class="flex-shrink-0 overflow-hidden rounded-full w-10 h-10">
+            <img alt="Avatar" src="https://images.unsplash.com/photo-1463453091185-61582044d556?w=100&h=100&crop=faces" loading="lazy" />
+          </div>
+          <div>
+            <div class="text-sm font-medium text-white">Dylan Ambrose</div>
+            <div class="text-xs text-gray-400">Lead marketer at Netflix</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-col justify-between h-full p-6 bg-[#111] rounded-xl border border-gray-700 hover:border-indigo-500 transition">
+        <p class="text-base leading-relaxed text-gray-300">
+          This is an <mark class="px-1 text-indigo-300 bg-indigo-800 rounded-md ring-1 ring-indigo-600">awesome</mark>
+          landing page template I've seen. I would use this for anything.
+        </p>
+        <div class="flex items-center mt-6 space-x-3">
+          <div class="flex-shrink-0 overflow-hidden rounded-full w-10 h-10">
+            <img alt="Avatar" src="https://images.unsplash.com/photo-1624224971170-2f84fed5eb5e?w=100&h=100&crop=faces" loading="lazy" />
+          </div>
+          <div>
+            <div class="text-sm font-medium text-white">Gabrielle Winn</div>
+            <div class="text-xs text-gray-400">Co-founder of Acme Inc</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+
+
+<section class="bg-black" id="contact">
+  <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-20">
+    <div class="mb-4 text-center">
+      <div class="mb-6 max-w-3xl mx-auto">
+        <h2 class="font-heading mb-4 font-bold tracking-tight text-3xl sm:text-5xl text-white">
+          Contact <span class="text-[#4169E1]">Me</span>
+        </h2>
+        <p class="text-xl text-slate-400">Feel free to reach out for any inquiries or collaborations!</p>
+      </div>
+    </div>
+
+    <div class="flex items-stretch justify-center">
+      <div class="grid md:grid-cols-2 gap-10">
+        <!-- Contact Info -->
+        <div class="text-slate-300">
+          <p class="mb-12 text-lg">
+            I'm always open to discussing new projects or opportunities. Drop a message and I'll get back to you!
+          </p>
+
+          <ul class="space-y-6">
+            <li class="flex items-start">
+              <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-white">
+                <!-- Phone Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2"/>
+                  <path d="M15 7a2 2 0 0 1 2 2"/>
+                  <path d="M15 3a6 6 0 0 1 6 6"/>
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-white">Contact</h3>
+                <p>Mobile: +1 (123) 456-7890</p>
+                <p>Email: tailnext@gmail.com</p>
+              </div>
+            </li>
+
+            <li class="flex items-start">
+              <div class="flex h-10 w-10 items-center justify-center rounded bg-blue-900 text-white">
+                <!-- Clock Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24"
+                     stroke="currentColor" stroke-width="2">
+                  <path d="M3 12a9 9 0 1 0 18 0a9 9 0 0 0 -18 0" />
+                  <path d="M12 7v5l3 3" />
+                </svg>
+              </div>
+              <div class="ml-4">
+                <h3 class="text-lg font-semibold text-white">Working Hours</h3>
+                <p>Mon - Fri: 08:00 - 17:00</p>
+                <p>Sat - Sun: 08:00 - 12:00</p>
+              </div>
+            </li>
+          </ul>
+
+          <!-- Social Icons -->
+          <ul class="flex space-x-6 mt-10">
+            <li>
+              <a href="https://wa.me/6285725778419" target="_blank"
+                 class="flex items-center space-x-3 group cursor-pointer">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-green-600 text-white shadow-lg border border-white transition duration-300 group-hover:bg-white group-hover:text-green-600">
+                  <i class="fab fa-whatsapp text-xl"></i>
+                </div>
+                <span class="text-white group-hover:text-green-500 font-semibold">WhatsApp</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.tiktok.com/@f................8" target="_blank"
+                 class="flex items-center space-x-3 group cursor-pointer">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-black text-white shadow-lg border border-white transition duration-300 group-hover:bg-white group-hover:text-black">
+                  <i class="fab fa-tiktok text-xl"></i>
+                </div>
+                <span class="text-white group-hover:text-gray-300 font-semibold">TikTok</span>
+              </a>
+            </li>
+            <li>
+              <a href="https://github.com/Fajar-012" target="_blank"
+                 class="flex items-center space-x-3 group cursor-pointer">
+                <div
+                  class="flex h-10 w-10 items-center justify-center rounded-full bg-gray-800 text-white shadow-lg border border-white transition duration-300 group-hover:bg-white group-hover:text-gray-800">
+                  <i class="fab fa-github text-xl"></i>
+                </div>
+                <span class="text-white group-hover:text-gray-300 font-semibold">GitHub</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="bg-gray-900 p-8 rounded-lg shadow-md">
+          <h2 class="mb-4 text-2xl font-bold text-white border-b-2 border-blue-700 inline-block">
+            Ready to Get Started?
+          </h2>
+          <form id="contactForm">
+            <div class="space-y-4">
+              <input type="text" name="name" placeholder="Your name"
+                     class="w-full rounded-md border border-gray-500 bg-gray-800 text-white p-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+
+              <input type="email" name="email" placeholder="Your email address"
+                     class="w-full rounded-md border border-gray-500 bg-gray-800 text-white p-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600" />
+
+              <textarea name="textarea" rows="5" placeholder="Write your message..."
+                        class="w-full rounded-md border border-gray-500 bg-gray-800 text-white p-2 shadow-sm placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-600"></textarea>
+            </div>
+            <button type="submit"
+                    class="mt-6 w-full bg-blue-700 hover:bg-blue-800 text-white py-3 rounded-md font-semibold transition">
+              Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer class="bg-black text-white py-12 px-6 mt-20">
+  <div class="border-t border-white w-full max-w-6xl mx-auto pt-10"></div>
+
+  <!-- Navigation -->
+  <nav class="flex flex-wrap justify-center gap-8 text-gray-400 font-medium mb-10">
+    <a href="#" class="hover:text-white transition">Home</a>
+    <a href="#" class="hover:text-white transition">About</a>
+    <a href="#" class="hover:text-white transition">Projects</a>
+    <a href="#" class="hover:text-white transition">Contact</a>
+  </nav>
+
+  
+  
+
+  <!-- Social Media Icons -->
+ <div class="flex justify-center gap-6 mt-6">
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/fajar.9677" class="w-14 h-14 text-white border border-white flex items-center justify-center rounded-full 
+    hover:text-[#E4405F] hover:bg-white hover:shadow-[0_0_25px_#E4405F] transition duration-300" 
+    data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+    <i class="fab fa-instagram text-2xl sm:text-3xl"></i>
+  </a>
+
+  <!-- TikTok -->
+  <a href="https://www.tiktok.com/@f................8" class="w-14 h-14 text-white border border-white flex items-center justify-center rounded-full 
+    hover:text-[#69C9D0] hover:bg-white hover:shadow-[0_0_25px_#69C9D0] transition duration-300" 
+    data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+    <i class="fab fa-tiktok text-2xl sm:text-3xl"></i>
+  </a>
+
+  <!-- GitHub -->
+  <a href="https://github.com/Fajar-012" class="w-14 h-14 text-white border border-white flex items-center justify-center rounded-full 
+    hover:text-[#333] hover:bg-white hover:shadow-[0_0_25px_#333] transition duration-300" 
+    data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+    <i class="fab fa-github text-2xl sm:text-3xl"></i>
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6285725778419" class="w-14 h-14 text-white border border-white flex items-center justify-center rounded-full 
+    hover:text-[#25D366] hover:bg-white hover:shadow-[0_0_25px_#25D366] transition duration-300" 
+    data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">
+    <i class="fab fa-whatsapp text-2xl sm:text-3xl"></i>
+  </a>
+</div>
+
+
+  <!-- Copyright -->
+   
+  <p class="text-center text-gray-500 text-sm mt-8">&copy; 2025 Fajarsarwono. All rights reserved.</p>
+
+</footer>
+
+
+
+<!-- Lucide Init Script -->
+<script>
+  lucide.createIcons();
+</script>
+
+
+    <script>
+      // tailwind.config.js
+module.exports = {
+  theme: {
+    extend: {
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
+    },
+  },
+}
+
+ 
+    </script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+     <script src="portofolio/popover.js"></script>
+  </body>
+</html>
