@@ -90,10 +90,8 @@
 </div>
 
   </div>
-
-    <!-- Spline Viewer -->
-<div class="w-full md:w-1/2 h-[calc(100vh-64px)] flex items-center justify-center pointer-events-none z-0"
->
+<!-- Desktop Spline Viewer (tampil di md ke atas) -->
+<div class="hidden md:flex w-1/2 h-[calc(100vh-64px)] items-center justify-center z-0">
   <div class="transform scale-[0.65] origin-center">
     <spline-viewer
       url="https://prod.spline.design/zXlYazSiOR4BCbsi/scene.splinecode"
@@ -101,6 +99,18 @@
     ></spline-viewer>
   </div>
 </div>
+
+<!-- Mobile Spline Viewer (tampil di bawah md) -->
+<div class="flex md:hidden w-full h-[calc(100vh-64px)] items-center justify-center z-0 px-4">
+  <div class="w-full max-w-md">
+    <spline-viewer
+      url="https://prod.spline.design/zXlYazSiOR4BCbsi/scene.splinecode"
+      style="width: 100%; height: 60vh;"
+    ></spline-viewer>
+  </div>
+</div>
+
+
   </section>
 
   
