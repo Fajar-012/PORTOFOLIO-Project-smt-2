@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kerajaan Tarumanagara</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #dc775e;
+  --primary-color-dark: #bb654f;
+  --text-dark: #171717;
+  --text-light: #525252;
+  --extra-light: #f5f5f5;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.section__description {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  color: var(--white);
+  white-space: nowrap;
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary-color-dark);
+  box-shadow: 5px 5xp 20px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  display: flex;
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  z-index: 9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav__bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--extra-light);
+}
+
+.nav__bar a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.nav__links {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--text-light);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-weight: 500;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+}
+
+.header__container {
+  padding-top: 8rem;
+  display: grid;
+  gap: 2rem;
+  text-align:justify;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #e8450694;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+.header__content h1 span {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.header__image img {
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: header 5s infinite;
+}
+
+@keyframes header {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(20px);
+  }
+}
+
+.about {
+  background-color: var(--extra-light);
+}
+
+.about__container {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+
+.about__image img {
+  max-width: 800px;
+  margin: auto;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  animation: header 5s infinite;
+}
+
+
+
+.article {
+  background-color: #fdfcfc94;
+}
+
+.article__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 4rem 1rem;
+  text-align: center;
+}
+
+.article__card img {
+  max-width: 500px;
+  text-align: center;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.article__card h4 {
+  margin-bottom: 1rem;
+  text-align:center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.article__card p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.article__card a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.article__card a:hover {
+  color: var(--primary-color-dark);
+}
+
+.footer__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.footer__col h4 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__links {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__links a {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.footer__links a:hover {
+  color: var(--primary-color);
+}
+
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-top: 2px solid #e8550a94;
+}
+
+.footer__bar p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: black;
+  text-align:center;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.footer__socials a:hover {
+  color: var(--primary-color);
+}
+
+@media (width > 576px) {
+  
+
+
+  .article__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+  }
+
+  .nav__bar {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .nav__links a {
+    color: var(--text-dark);
+  }
+
+  .header__container {
+    padding-top: 5rem;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+  }
+
+  .header__image {
+    grid-area: 1/2/2/3;
+  }
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: left;
+  }
+
+  .about__image {
+    grid-area: 1/2/2/3;
+  }
+
+
+
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer__bar {
+    flex-direction: row;
+  }
+}
+  </style>
+</head>
+<body>
+        <!--Bagian Navigasi-->
+    <nav>
+      <div class="nav__bar">
+        <a href="#">Sejarah</a>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+        <li><a href="Web berita.html">Beranda</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Sejarah/Kritik</a></li>
+      </ul>
+    </nav>
+          <!--Bagian header berisi judul dan gambar-->
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="../Gambar web/1200px-Tarumanagara_id.svg (1).png" alt="header" />
+      </div>
+      <div class="header__content">
+        <h1>Kerajaan<br /><span><b>Tarumanagara</b></span></h1>
+        <p class="section__description">
+         Kerajaan Tarumanegara adalah kerajaan kuno yang berkuasa di wilayah Pulau Jawa bagian barat dari abad ke-4 hingga ke-7 Masehi. Kerajaan ini didirikan oleh Jayasingawarman pada tahun 358 M dan mencapai masa kejayaan di bawah kepemimpinan Purnawarman, cucu dari pendiri kerajaan tersebut
+        </p>
+        <div class="header__btn">
+          <button class="btn">Baca dengan baik</button>
+        </div>
+      </div>
+    </header>
+          <!--Bagian section berisi cerita sejarah dan gambar-->
+    <section class="about" id="about">
+      <div class="section__container about__container">
+        <div class="about__image">
+          <img src="../Gambar web/Gambar-6.jpg" alt="about" />
+        </div>
+        <div class="about__content">
+          <h2 class="section__header"><b>Sejarah kerajaan Tarumanagara</h2>
+          <p class="section__description">
+            Kerajaan Hindu tertua lainnya adalah Kerajaan Tarumanagara. Letaknya di wilayah Jawa Barat sekarang. Hal ini dibuktikan dengan adanya sejumlah prasasti di daerah sekitar Bogor (Prasasti Ciaruteun, Kebon Kopi, Jambu, Pasir Awi, dan Prasasti Muara Cianten), Prasasti Tugu di Cilincing (Jakarta Utara), dan Prasasti Cidanghiang di Desa Lebak, Banten.
+
+Kerajaan ini diperkirakan ada sejak abad V, sezaman dengan Kerajaan Kutai. Hal ini diperkuat oleh berita Tiongkok yang menyebut kerajaan To-Lo-Mo (Tarumanagara) mengirimkan utusan ke Tiongkok pada tahun 528, 538, 665, dan 666 M untuk sebuah kunjungan persahabatan yang didasari hubungan dagang. To-Lo-Mo disebutkan terletak di sebelah tenggara Tiongkok.
+
+Kata taruma berasal dari kata torum yang berarti nila. Sampai sekarang, nama ini masih dapat kita jumpai sebagai nama sungai, yaitu Sungai Citarum. Raja yang memerintah bernama Purnawarman. Sama dengan raja-raja di Kutai, Purnawarman adalah asli orang Indonesia yang menggunakan nama India dan memeluk Hindu. Menurut Prasasti Tugu, wilayah kekuasaannya meliputi hampir seluruh Jawa Barat, yaitu membentang dari Banten, Jakarta, Bogor, hingga Cirebon.Gambaran kondisi sosial-politik Kerajaan Tarumanagara didapat melalui tinggalan prasasti-prasasti. Dalam Prasasti Ciaruteun atau Prasasti Ciampea tertulis:
+
+"Inilah (tanda) sepasang telapak kaki yang seperti kaki Dewa Wisnu ialah telapak yang mulia sang Purnawarman, raja di negeri Taruma, raja yang gagah berani di dunia."Cap telapak kaki melambangkan kekuasaan atau penaklukan raja atas daerah tempat ditemukannya prasasti tersebut. Raja Purnawarman diibaratkan Dewa Wisnu (dewa pemelihara alam semesta), yang menunjukkan pada masa itu rakyat menganggap Raja Purnawarman sebagai pemelihara dan pelindung rakyat. Tulisan ini juga menggambarkan pemerintahan di Kerajaan Tarumanagara telah menerapkan konsep dewa raja: raja yang memerintah disamakan dengan Dewa Wisnu.</p>
+
+<p>Dalam Prasasti Kebon Kopi, terdapat gambar tapak kaki gajah, yang disamakan dengan gajah Airawata, atau gajah kendaraan Dewa Wisnu. Sayangnya, sebagian isi prasasti ini tidak terbaca. Prasasti Tugu merupakan prasasti terpanjang dan terpenting dari Raja Purnawarman. Tulisan yang ada di atas batu dapat dibaca secara melingkar, yang isinya antara lain menyebutkan tentang pembangunan saluran air yang panjangnya 6.112 tombak (setara dengan 11 km) yang diberi nama Gomati. Saluran ini dibuat ketika Raja Purnawarman telah memerintah selama 22 tahun dan diselesaikan hanya dalam waktu 21 hari. Selain itu, prasasti ini juga menyebutkan tentang penggalian Sungai Candrabagha, menurut para ahli sama dengan Sungai Bekasi sekarang. Bekasi berasal dari kata baghasasi, sedangkan candra berarti bulan atau sasi. Sangat dimungkinkan penggalian sungai ini adalah untuk mengatasi masalah banjir, serta untuk mengairi sawah pada musim kemarau. Berikut kutipan terjemahan lengkap prasasti tersebut:
+
+"Dahulu sungai bernama Candrabhaga telah digali oleh maharaja yang mulia dan yang memiliki lengan kencang serta kuat yakni Purnawarman, untuk mengalirkannya ke laut, setelah kali (saluran sungai) ini sampai di istana kerajaan yang termasyhur. Pada tahun ke-22 dari takhta Yang Mulia Raja Purnawarman yang berkilau-kilauan karena kepandaian
+          </p><br>
+          <p class="section__description">
+            dan kebijaksanaannya serta menjadi panji-panji segala raja raja, (maka sekarang) beliau pun menitahkan pula menggali kali (saluran sungai) yang permal dan berair jernih Gomati namanya, setelah kali (saluran sungai) tersebut mengalir melintas di tengah-tengah tanah kediaman Yang Mulia Sang Pendeta Nenekda (Raja Purnawarman), Pekerjaan ini dimulai pada hari baik, tanggal 8 paro-gelap bulan Phalguna dan selesai pada tanggal 13 parah terang bulan Caitra, jadi hanya berlangsung 21 hari lamanya, sedangkan saluran galian tersebut panjangnya 6.122 tombak. Selamatan baginya dilakukan oleh para brahmana disertai 1.000 ekor sapi yang dihadiahkan."
+
+Dari prasasti-prasasti tersebut, dapat kita ketahui pada masa itu di Jawa Barat telah terdapat sebuah kerajaan yang besar dan cukup makmur, serta penduduknya hidup dari hasil pertanian.
+
+Pada akhir masa pemerintahan raja Tarumanagara yang terakhir, Sri Maharaja Linggawarman (memerintah 666-669 M), Kerajaan Tarumanagara pecah menjadi dua, yaitu Kerajaan Sunda, yang merupakan kelanjutan dari Kerajaan Tarumanagara di bawah kekuasaan menantunya bernama Tarusbawa, dan Kerajaan Galuh di bawah Wretikandayun. Baik Sunda maupun Galuh sebelumnya merupakan kerajaan bawahan Tarumanagara. Kelak di bawah Sanjaya (putra Sanna raja ketiga Galuh), kedua kerajaan ini dipersatukan kembali (tahun 732 M). Sanjaya menjadi pewaris takhta ibunya (Sanaha) di Bumi Mataram (Kalingga utara), yang kelak melahirkan Kerajaan Mataram Kuno, sedangkan Galuh, Sunda, Kuningan, dan Galunggung dibagi kepada dua orang putra hasil perkawinannya dengan putri dari Tarusbawa). Di Mataram, Sanjaya mewariskan takhta kepada putranya Rakai Panangkaran, hasil perkawinannya dengan Dewi Sudiwara, yaitu putri Dewasinga penguasa Kalingga selatan allas Bumi Sambara
+          </p>
+
+    </section>
+    <hr color="orange">
+   <hr color="orange">
+    <hr color="orange">
+          <!--Bagian section berisi kritik karya seni dan gambar-->
+       <section class="about" id="about">
+      <div class="section__container about__container">
+        <div class="about__image">
+          <img src="../Gambar web/tugu-001-ani-mardatila.jpg" alt="about" />
+        </div>
+        <div class="about__content">
+          <h2 class="section__header"><b>Kritik Seni Prasati Tugu</b></h2>
+          <p class="section__description">
+            <ol>
+           
+<li> Deskripsi</li>
+Judul: Prasasti Tugu<br>
+
+Tahun: Sekitar abad ke-5 M (perkirakan sekitar 450 M)<br>
+
+Seniman: Tidak diketahui secara spesifik, namun prasasti ini dibuat pada masa pemerintahan Raja Purnawarman, raja kerajaan Tarumanegara.<br>
+
+Teknik: Ukiranb<br>
+
+Bahan: Batu andesit<br>
+
+
+Prasasti Tugu adalah salah satu prasasti yang ditemukan di sekitar wilayah Tugu, Jakarta, dan berhubungan dengan kerajaan Tarumanegara, sebuah kerajaan Hindu yang berkuasa di wilayah Jawa Barat pada abad ke-5. Prasasti ini berfungsi sebagai dokumen yang mencatatkan informasi terkait dengan kegiatan kerajaan dan kebesaran Raja Purnawarman. Sebagai prasasti, karya ini memiliki tujuan untuk mengukuhkan kekuasaan dan prestasi pemerintahan raja.<br>
+
+<li> Analisis Formal</li>
+
+Objek: Prasasti Tugu berisi tulisan yang diukir dalam aksara Pallawa, yang merupakan aksara kuno yang digunakan dalam prasasti-prasasti India dan Asia Tenggara pada masa itu. Tulisan ini mengandung teks yang menceritakan tentang pencapaian Raja Purnawarman, serta penanaman sungai yang dilakukan oleh raja untuk meningkatkan kesejahteraan rakyatnya.<br>
+
+Warna: Sebagai prasasti yang terbuat dari batu andesit, warna alami batu ini adalah abu-abu gelap dengan sedikit kekuningan. Seiring waktu, warna asli batu ini telah pudar, namun masih terlihat jelas dalam ukiran tulisan yang kontras dengan latar belakang batu.<br>
+
+Bentuk: Prasasti ini berbentuk persegi panjang vertikal dengan ukiran yang terdiri dari beberapa baris tulisan. Secara keseluruhan, bentuknya cukup sederhana, dengan fokus utama pada teks yang diukir dengan presisi.<br>
+
+Komposisi: Komposisi prasasti ini lebih difokuskan pada struktur teks yang tertulis secara teratur dalam beberapa baris, tanpa adanya ornamen atau gambar tambahan. Ukiran teks diatur dengan rapi, dan ada penggunaan ruang yang cukup efisien untuk menampung informasi secara jelas dan terstruktur.<br>
+
+
+<li>Interpretasi</li>
+
+Makna: Prasasti Tugu mencatatkan tindakan Raja Purnawarman yang mengarahkan pembangunan saluran air atau irigasi dan penanaman sungai untuk kepentingan rakyatnya. Tindakan ini bukan hanya merupakan langkah besar dalam pembangunan infrastruktur, tetapi juga menjadi simbol kebijaksanaan dan perhatian seorang raja terhadap kesejahteraan rakyatnya. Sebagai prasasti, karya ini juga berfungsi sebagai legitimasi politik untuk memperkuat posisi Raja Purnawarman sebagai pemimpin yang bijaksana.<br>
+
+Simbol: Prasasti ini adalah simbol dari kekuasaan, kebesaran, dan prestasi Raja Purnawarman. Selain itu, simbol penting dalam prasasti ini adalah saluran air atau sungai yang disebutkan, yang mewakili kemampuan raja dalam mengelola sumber daya alam untuk kepentingan rakyat. Saluran air ini bisa dilihat sebagai simbol kelimpahan dan keberlanjutan yang membawa manfaat bagi masyarakat.<br>
+
+Maksud Pembuatan Karya: Tujuan utama pembuatan prasasti ini adalah untuk mengabadikan prestasi Raja Purnawarman dan mengukuhkan nama raja tersebut dalam sejarah. Selain itu, prasasti ini juga memiliki fungsi sosial dan politik, yaitu untuk menunjukkan kepada rakyat dan kerajaan lainnya tentang prestasi dan kebijakan raja, serta memperlihatkan kedudukan dan kekuasaan politik yang dimilikinya.<br>
+
+
+<li> Evaluasi</li>
+
+Penilaian Positif (Baik):
+
+Dokumentasi Sejarah yang Berharga: Prasasti Tugu memberikan informasi yang sangat penting mengenai kerajaan Tarumanegara dan Raja Purnawarman. Sebagai salah satu prasasti tertua di Indonesia, ia memberikan wawasan tentang perkembangan sosial, politik, dan budaya pada masa tersebut 
+          </p>
+     </ol>
+     </section>
+           <!--Bagian footer-->
+     <footer id="rtyu">
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h4>Produksi</h4>
+          <ul class="footer__links">
+            <li><a href="#">kelompok 7</a></li>
+            <li><a href="#">Anisa Yuli Astuti</a></li>
+            <li><a href="#">Fajar Sarwono</a></li>
+            <li><a href="#">Naila Larasati</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Komposisi</h4>
+          <ul class="footer__links">
+            <li><a href="#">Teks</a></li>
+            <li><a href="#">Gambar</a></li>
+            <li><a href="#">Navigasi</a></li>
+      
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Media sosial</h4>
+          <ul class="footer__links">
+            <li><a href="#">Tik-tok</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>content</h4>
+          <ul class="footer__links">
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Telphone</a></li>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <p>Copyright © 2024 Web Berita Halaman 3 Kelompok 7.</p>
+
+      </div>
+    </footer>   
+
+</body>
+</html>

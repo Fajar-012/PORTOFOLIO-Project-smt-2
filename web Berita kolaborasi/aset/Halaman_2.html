@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kerajaan Medang Kamulan</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #dc775e;
+  --primary-color-dark: #bb654f;
+  --text-dark: #171717;
+  --text-light: #525252;
+  --extra-light: #f5f5f5;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.section__description {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  color: var(--white);
+  white-space: nowrap;
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary-color-dark);
+  box-shadow: 5px 5xp 20px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  display: flex;
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  z-index: 9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav__bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--extra-light);
+}
+
+.nav__bar a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.nav__links {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--text-light);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-weight: 500;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+}
+
+.header__container {
+  padding-top: 8rem;
+  display: grid;
+  gap: 2rem;
+  text-align:justify;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #e8450694;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+.header__content h1 span {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.header__image img {
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: header 5s infinite;
+}
+
+@keyframes header {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(20px);
+  }
+}
+
+.about {
+  background-color: var(--extra-light);
+}
+
+.about__container {
+  display: grid;
+  gap: 2rem;
+  text-align: center;
+}
+
+
+
+
+.article {
+  background-color: #fdfcfc94;
+}
+
+.article__grid {
+  margin-top: 4rem;
+  display: flex;
+  gap: 4rem 1rem;
+  text-align: center;
+}
+
+.article__card img {
+  max-width: 500px;
+  margin-top: 1%;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.article__card h4 {
+  margin-bottom: 1rem;
+  text-align:center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.article__card p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.article__card a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.article__card a:hover {
+  color: var(--primary-color-dark);
+}
+
+
+
+
+.banner {
+  background-color: var(--extra-light);
+}
+
+.banner__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.banner__card {
+  display: flex;
+  align-items: rights;
+  text-align: center;
+  gap: 1rem;
+}
+
+.banner__card img {
+  max-width: 70px;
+  text-align:center;
+}
+
+.banner__card h4 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.footer__col h4 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__links {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__links a {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.footer__links a:hover {
+  color: var(--primary-color);
+}
+
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-top: 2px solid #e8550a94;
+}
+
+.footer__bar p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: black;
+  text-align:center;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.footer__socials a:hover {
+  color: var(--primary-color);
+}
+
+@media (width > 576px) {
+  
+
+  .article__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner__card {
+    justify-content: flex-start;
+  }
+
+  .banner__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+  }
+
+  .nav__bar {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .nav__links a {
+    color: var(--text-dark);
+  }
+
+  .header__container {
+    padding-top: 5rem;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+  }
+
+  .header__image {
+    grid-area: 1/2/2/3;
+  }
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: left;
+  }
+
+  .about__image {
+    grid-area: 1/2/2/3;
+  }
+
+
+
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer__bar {
+    flex-direction: row;
+  }
+}
+  </style>
+</head>
+<body>
+    <!--Bagian navigasi-->
+    <nav>
+      <div class="nav__bar">
+        <a href="#">Sejarah</a>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+       <li><a href="Web berita.html">Beranda</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Sejarah/Kritik</a></li>
+      </ul>
+    </nav>
+      <!--Bagian header-->
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="../Gambar web/Gambar-2.jpg" alt="header" />
+      </div>
+      <div class="header__content">
+        <h1>Kerajaan<br /><span><b>Medang Kamulan</b></span></h1>
+        <p class="section__description">
+           Sumber sejarah tentang kerajaan ini adalah Prasasti Paradah (943 M) dan Prasasti Anjukladang (973 M). Keduanya menyebutkan nama ibu kota Kerajaan Medang, yakni Watugaluh, sekarang sebuah desa di dekat Jombang di tepi aliran Sungai Brantas. 
+        </p>
+        <div class="header__btn">
+          <button class="btn">Baca dengan baik</button>
+        </div>
+      </div>
+    </header>
+      <!--Bagian section berisi cerita Sejarah-->
+    <section class="about" id="about">
+      <div class="section__container about__container">
+        <div class="about__image">
+          <img src="../Gambar web/611285c473fff.png" alt="about" />
+        </div>
+        <div class="about__content">
+          <h2 class="section__header"><b>Sejarah kerajaan Medang kamulan</b></h2>
+          <p class="section__description">
+  Kerajaan bercorak Hindu ini merupakan kelanjutan dari Kerajaan Mataram. Pada abad X, kerajaan ini dipindahkan oleh Sri Maharaja Rakai Hino Sri Isana Wikramadharmottunggadewa alias Mpu Sindok ke Jawa Timur; karena itu, disebut juga Kerajaan Medang periode Jawa Timur.
+
+Mpu Sindok adalah menantu Raja Wawa, yang pada masa pemerintahan Raja Tulodhong dan Raja Wawa menjabat sebagai mahamantri (jabatan tingkat tinggi yang biasanya hanya diisi putra mahkota). la naik takhta pada tahun 929 M dan dianggap sebagai pendiri dinasti baru bernama Dinasti Isana, mengikuti nama raja pertamanya.
+
+Menurut para ahli, pemindahan Kerajaan Mataram (Medang) ke Jawa Timur disebabkan terjadinya letusan Gunung Merapi yang disertai gempa bumi dan hujan material vulkanik yang memorak-porandakan sebagian besar wilayah Jawa Tengah. Faktor lain adalah adanya konflik perebutan takhta di dalam istana. Adanya konflik semacam ini ditunjukkan dalam Prasasti Wanua Tengah III.
+ Kondisi sosial-politik kerajaan,
+Mpu Sindok memerintah bersama-sama dengan permaisurinya. Beberapa prasasti lainnya menyebutkan pada masa pemerintahannya negara aman dan tenteram. Meskipun menganut Hindu aliran Siwa, ia tetap menaruh toleransi yang besar terhadap agama lain.
+
+Misalnya, ia menganugerahkan Desa Wanjang sebagai hadiah kepada seorang pujangga bernama Sri Sambhara Suryawarana, yang telah berjasa menulis kitab Buddha aliran Tantrayana berjudul Sang Hyang Kamahayanikan. Dengan demikian, Mpu Sindok memfasilitasi perkembangan agama Buddha Tantrayana, yaitu sinkretisme (percampuran) antara ajaran Buddha dan agama Hindu aliran Siwa.
+
+Penguasa Medang setelah Mpu Sindok adalah (berturut- turut): Sri Isyanatunggawijaya, Sri Makutawangsawardhana, Dharmawangsa (punya saudari bernama Mahendradatta), dan Airlangga. Dharmawangsa pernah menyerang Sriwijaya pada tahun 990 M dan menguasai pesisir pantai Sriwijaya sehingga hubungan Sriwijaya dengan dunia luar terputus.
+
+Pada tahun 1016 M, kerajaan ini mengalami pralaya atau malapetaka. Ketika pesta pernikahan antara putri Dharmawangsa dan Airlangga (hasil pernikahan Mahendradatta dengan Raja Udayana dari Bali) sedang berlangsung, tiba-tiba Kota Watan
+          </p>
+          <p class="section__description">
+            diserbu Raja Wurawari yang berasal dari Lwaram (sekarang Desa Ngloram. Cepu, Bloral, sekutu Kerajaan Sriwijaya. Dalam serangan itu, Dharmawangsa dan seluruh anggota keluarga istana tewas, sedangkan Airlangga lolos ke hutan pegunungan (Wanagiri) ditemani pembantu setianya, Mpu Narotama. Di sana, la menjalani hidup sebagai pertapa.
+
+Tidak lama kemudian, Airlangga dinobatkan sebagai raja oleh para pendeta pada tahun 1019 M dan membangun pusat kerajaan di Kahuripan, Sidoarjo (kelak dipindahkan lagi ke Daha, Kediri). Namun, wilayah kekuasaannya tidak seluas saat mertuanya berkuasa karena sebagian wilayah tidak mau tunduk lagi kepada Airlangga. Dengan demikian, sejak tahun 1025, Airlangga memperluas kekuasaan dan pengaruhnya seiring melemahnya Sriwijaya. Langkah pertama yang dilakukannya adalah menyusun kekuatan untuk menegakkan kembali kekuasaan Wangsa Isyana atas Pulau Jawa. Hal ini terwujud pada tahun 1037: semua wilayah Kerajaan Medang tunduk kepada Airlangga. Selanjutnya, ia memberi kedudukan (posisi) kepada setiap orang yang berjasa terhadap kerajaan. Lebih dari itu, la dikenal sangat memperhatikan rakyat. Selama masa pemerintahannya pun, karya-karya sastra berkembang, di antaranya kitab Arjunawiwaha yang ditulis Mpu Kanwa pada
+
+1035 M.
+
+
+
+
+
+Usaha Airlangga untuk meningkatkan kesejahteraan Medang, antara lain sebagai berikut.
+
+Memperbaiki pelabuhan Hujung Galuh di muara Kali
+
+Brantas. Pelabuhan Hujung Galuh dan Tuban menjadi
+
+pelabuhan dagang yang ramai. Kapal-kapal dari India, Birma, Kamboja, dan Champa berkunjung ke kedua tempat itu.
+
+Membangun Waduk Waringin Sapta untuk mencegah banjir musiman.
+
+Membangun jalan-jalan yang menghubungkan pesisir ke pusat kerajaan.
+
+Agama yang berkembang pada masa pemerintahan Airlangga adalah agama Hindu beraliran Wisnu. Airlangga memang dianggap sebagai titisan Dewa Wisnu dan pada masa pemerintahannya, berkembang banyak aliran keagamaan, seperti Hindu aliran Siwa dan Buddha; Airlangga menolerir terhadap semua aliran itu.
+
+Sebelum mengundurkan diri sebagai raja, Airlangga membagi dua kerajaannya kepada dua putranya: Kerajaan Jenggala kepada Mapanji Garasakan (anak istri kedua Airlangga) dengan ibu kota Kahuripan, dan Kerajaan Panjalu atau Kediri kepada Sri Samarawijaya (putra mahkota) dengan ibu kota Daha. Tindakan tersebut dilakukan untuk menghindari pertumpahan darah karena perebutan takhta. la sendiri kemudian menjadi pertapa dan mangkat pada 1049 M. Di pemakamannya di Candi Belahan, ia digambarkan sebagai Dewa Wisnu yang sedang mengendarai burung garuda.
+            
+          </p>
+
+    </section>
+      <!--Bagian section kritik karya seni-->
+         <hr  color="orange">
+        <hr  color="orange">
+        <hr  color="orange">
+       <section class="about" id="about">
+      <div class="section__container about__container">
+        <div class="about__image">
+          <img src="../Gambar web/EowJtydUYAAgoZZ.jpg" alt="about" />
+        </div>
+        <div class="about__content">
+          <h2 class="section__header"><b>Kritik Seni Prasasti Bangil</b></h2>
+          <p class="section__description">
+            <ol>
+ <li> Deskripsi</li>
+
+Judul: Prasasti Bangil<br>
+
+•Tahun: Diperkirakan berasal dari abad ke-8 M, sekitar masa pemerintahan kerajaan Medang Kamulan, yang merupakan bagian dari kerajaan Mataram Kuno.<br>
+
+•Seniman: Tidak ada informasi pasti mengenai seniman yang membuatnya, namun prasasti ini kemungkinan dibuat oleh pengukir atau pengrajin profesional pada masa itu.<br>
+
+•Teknik: Ukiran<br>
+
+•Bahan: Batu andesit<br>
+
+
+
+
+<li> Analisis Formal</li>
+
+•Objek: Prasasti ini berisi teks yang diukir dengan aksara Kawi, yang merupakan aksara kuno yang digunakan oleh kerajaan-kerajaan Hindu-Buddha di Indonesia pada masa itu. Teks tersebut berisi perintah atau keputusan raja yang terkait dengan pengaturan wilayah atau administrasi kerajaan.<br>
+
+•Warna: Prasasti ini terbuat dari batu andesit dengan warna alami abu-abu gelap hingga kehitaman. Ukiran teks yang terukir di atas batu tersebut, meskipun sudah tergerus oleh waktu, masih tampak jelas dengan kontras yang cukup kuat.<br>
+
+•Bentuk: Prasasti ini memiliki bentuk persegi panjang tegak. Ukirannya sederhana dan lebih mengutamakan fungsi daripada estetika. Bentuknya tidak memiliki banyak ornamen atau dekorasi, karena tujuan utamanya adalah untuk menyampaikan informasi.<br>
+
+•Komposisi: Komposisi prasasti ini terstruktur dengan rapi, dengan barisan teks yang teratur. Ukiran teks diatur sedemikian rupa sehingga mudah dibaca dan dipahami, dengan jarak antar baris yang cukup memadai agar informasi dapat tersampaikan dengan jelas.<br>
+
+
+<li>Interpretasi</li>
+
+•Makna: Prasasti Bangil mengandung makna sebagai catatan resmi mengenai kebijakan atau keputusan yang diambil oleh raja Medang Kamulan. Ini bisa berkaitan dengan pengaturan administratif, hukum, atau peraturan tertentu di kerajaan tersebut. Secara lebih luas, prasasti ini mencerminkan usaha untuk mengabadikan kekuasaan dan keputusan raja, serta menegaskan otoritasnya.<br>
+
+•Simbol: Prasasti ini, sebagai artefak yang terbuat dari batu, melambangkan kekekalan dan ketahanan. Batu andesit yang digunakan memberikan kesan bahwa keputusan yang dicatatkan dalam prasasti ini bersifat abadi dan tidak mudah terhapus oleh waktu. Penggunaan aksara Kawi juga simbol dari kemajuan budaya dan sistem tulisan yang berkembang pada masa kerajaan Medang Kamulan.
+<br>
+•Maksud Pembuatan Karya: Prasasti ini dibuat untuk mengabadikan keputusan raja dalam bentuk yang tahan lama dan dapat diakses oleh generasi mendatang. Selain itu, prasasti ini juga memiliki tujuan untuk memperkuat legitimasi kekuasaan raja di mata rakyat dan kerajaan lain, sebagai alat untuk memastikan bahwa peraturan yang ditetapkan bersifat sah dan mengikat.<br>
+
+
+<li> Evaluasi</li>
+
+•Penilaian Baik:<br>
+
+Nilai Sejarah yang Tinggi: Prasasti Bangil adalah sumber yang sangat berharga bagi kita untuk memahami sejarah kerajaan Medang Kamulan, serta sistem pemerintahan pada masa itu. Informasi yang tercatat di dalamnya memberikan wawasan tentang pengelolaan wilayah dan peraturan yang diterapkan oleh raja.
+            </ol>
+          </p>
+
+          </p>
+
+    </section>
+      <!--Bagian footer-->
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h4>Produksi</h4>
+          <ul class="footer__links">
+            <li><a href="#">kelompok 7</a></li>
+            <li><a href="#">Anisa Yuli Astuti</a></li>
+            <li><a href="#">Fajar Sarwono</a></li>
+            <li><a href="#">Naila Larasati</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Komposisi</h4>
+          <ul class="footer__links">
+            <li><a href="#">Teks</a></li>
+            <li><a href="#">Gambar</a></li>
+            <li><a href="#">Navigasi</a></li>
+      
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Media sosial</h4>
+          <ul class="footer__links">
+            <li><a href="#">Tik-tok</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>content</h4>
+          <ul class="footer__links">
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Telphone</a></li>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <p>Copyright © 2024 Web Berita Halaman 3 Kelompok 7.</p>
+
+      </div>
+    </footer>
+</body>
+</html>

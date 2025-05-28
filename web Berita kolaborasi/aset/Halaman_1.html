@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Kerajaan Singasari</title>
+  <style>
+    @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #dc775e;
+  --primary-color-dark: #bb654f;
+  --text-dark: #171717;
+  --text-light: #525252;
+  --extra-light: #f5f5f5;
+  --white: #ffffff;
+  --max-width: 1200px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.section__container {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.section__header {
+  margin-bottom: 1rem;
+  font-size: 2.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.section__description {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.btn {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  color: var(--white);
+  white-space: nowrap;
+  background: var(--primary-color);
+  outline: none;
+  border: none;
+  cursor: pointer;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: var(--primary-color-dark);
+  box-shadow: 5px 5xp 20px rgba(0, 0, 0, 0.2);
+}
+
+img {
+  width: 100%;
+  display: flex;
+  border-radius: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+nav {
+  position: fixed;
+  isolation: isolate;
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto;
+  z-index: 9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.nav__bar {
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--extra-light);
+}
+
+.nav__bar a {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  cursor: pointer;
+}
+
+.nav__links {
+  list-style: none;
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  background-color: var(--text-light);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  font-weight: 500;
+  color: var(--white);
+  transition: 0.3s;
+}
+
+.nav__links a:hover {
+  color: var(--primary-color);
+}
+
+.header__container {
+  padding-top: 8rem;
+  display: grid;
+  gap: 2rem;
+  text-align:justify;
+}
+
+.header__content h1 {
+  margin-bottom: 1rem;
+  font-size: 3rem;
+  color: #e8450694;
+  font-weight: 500;
+  line-height: 2.5rem;
+}
+
+.header__content h1 span {
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+.header__image img {
+  filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+  -webkit-filter: drop-shadow(10px 10px 20px rgba(0, 0, 0, 0.2));
+  animation: header 5s infinite;
+}
+
+@keyframes header {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(-20px);
+  }
+  75% {
+    transform: translateY(20px);
+  }
+}
+
+.about {
+  background-color: var(--extra-light);
+}
+
+.about__container {
+  display: flex;
+
+align-items: center;
+  gap: 2rem;
+  
+  
+}
+
+.about__image img {
+  max-width: 1000px;
+  margin: 0;
+  align-items: center;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  animation: header 5s infinite;
+}
+
+
+
+
+
+
+.article {
+  background-color: #fdfcfc94;
+}
+
+.article__grid {
+  margin-top: 4rem;
+  display: grid;
+  gap: 4rem 1rem;
+  text-align: center;
+}
+
+.article__card img {
+  max-width: 800px;
+  height: 50px;
+  width:100px ;
+  text-align: center;
+  margin-inline: auto;
+  margin-bottom: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.article__card h4 {
+  margin-bottom: 1rem;
+  text-align:center;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.article__card p {
+  margin-bottom: 2rem;
+  color: var(--text-light);
+}
+
+.article__card a {
+  color: var(--primary-color);
+  text-decoration: underline;
+  transition: 0.3s;
+}
+
+.article__card a:hover {
+  color: var(--primary-color-dark);
+}
+
+
+
+
+.footer__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.footer__col h4 {
+  margin-bottom: 2rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__links {
+  list-style: none;
+  display: grid;
+  gap: 1rem;
+}
+
+.footer__links a {
+  font-weight: 500;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.footer__links a:hover {
+  color: var(--primary-color);
+}
+
+.footer__bar {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  border-top: 2px solid #e8550a94;
+}
+
+.footer__bar p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: black;
+  text-align:center;
+}
+
+.footer__socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer__socials a {
+  font-size: 1.2rem;
+  color: var(--text-light);
+  transition: 0.3s;
+}
+
+.footer__socials a:hover {
+  color: var(--primary-color);
+}
+
+@media (width > 576px) {
+  
+  
+  
+
+  .article__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .banner__card {
+    justify-content: flex-start;
+  }
+
+  .banner__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer__container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width > 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: none;
+  }
+
+  .nav__bar {
+    padding: 0;
+    background-color: transparent;
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .nav__links a {
+    color: var(--text-dark);
+  }
+
+  .header__container {
+    padding-top: 5rem;
+    align-items: center;
+    grid-template-columns: 1fr 2fr;
+    text-align: left;
+  }
+
+  .header__image {
+    grid-area: 1/2/2/3;
+  }
+
+  .about__container {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    text-align: left;
+  }
+
+  .about__image {
+    grid-area: 1/2/2/3;
+  }
+
+
+
+  .footer__container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .footer__bar {
+    flex-direction: row;
+  }
+}
+  </style>
+</head>
+<body>
+  <!--Bagian navigasi-->
+    <nav>
+      <div class="nav__bar">
+        <a href="#">Sejarah</a>
+        <div class="nav__menu__btn" id="menu-btn">
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </div>
+      <ul class="nav__links" id="nav-links">
+       <li><a href="Web berita.html">Beranda</a></li>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">Sejarah/Kritik</a></li>
+      </ul>
+    </nav>
+      <!--Bagian header-->
+    <header class="section__container header__container" id="home">
+      <div class="header__image">
+        <img src="../Gambar web/Gambar.1.jpg" alt="header" />
+
+      </div>
+      <div class="header__content">
+        <h1>Kerajaan<br /><span><b>Singa Sari</b></span></h1>
+        <p class="section__description">
+          Kerajaan Singasari adalah sebuah kerajaan bercorak Hindu di Jawa Timur yang didirikan oleh Ken Arok pada tahun 1222.Ken Arok adalah tokoh legendaris yang dikenal sebagai pendiri dan raja pertama(memerintah 1222-1227.
+        </p>
+        <div class="header__btn">
+          <button class="btn">Baca dengan baik</button>
+        </div>
+      </div>
+    </header>
+      <!--Bagian section yang berisi bacaan -->
+    <section class="about" id="about">
+      <div class="section__container about__container">
+        
+          <img src="../3-be50dfd0acb9 (1).png" alt="about" />
+        </div>
+        <div class="about__content">
+          <h2 class="section__header"><b>Sejarahnya</b></h2>
+          <p class="section__description">
+  Kerajaan ini beribu kota di Tumapel yang terletak di kawasan bernama Kutaraja. Pada awalnya, Tumapel hanyalah sebuah wilayah kabupaten yang berada dibawah kekuasaan Kerajaan Kadiri dengan bupati bernama Tunggul Ametung. Tunggul Ametung dibunuh oleh Ken Arok yang merupakan pengawalnya.
+
+Keberadaan Kerajaan Singasari dibuktikan melalui candi-candi yang banyak ditemukan di Jawa Timur, seperti daerah Singasari sampai Malang, juga melalui kitab sastra peninggalan zaman Majapahit yang berjudul Negarakerlagama karangan Mpu Prapanca yang menjelaskan tentang raja-raja yang memerintah di Singasari serta kitab Pararalon yang juga menceritakan riwayat Ken Arok yang penuh keajaiban.
+
+Sebelum menjadi raja, Ken Arok berkedudukan sebagai Akuwu (Bupati) di Tumapel menggantikan Tunggul Amelung yang dibunuhnya, karena tertarik pada Ken Dedes istri Tunggul Amelung. Selanjutnya, ia berkeinginan melepaskan Tumapel dari kekuasaan kerajaan Kadiri yang diperintah oleh Kerlajaya. Keinginannya terpenuhi setelah kaum Brahmana Kadiri meminta perlindungannya.
+
+          </p>
+        </section>
+          <section>
+          <p class="section__description">
+            Dengan alasan tersebut, maka tahun 1222 M/1144 C Ken Arok menyerang Kediri, sehingga Kertajaya mengalami kekalahan pada pertempuran di desa Ganter. Ken Arok yang mengangkat dirinya sebagai raja Tumapel bergRuntuhnya Kerajaan Singasari berawal dari konflik antara Raja Kertanegara dengan Jayakatwang dan Arya Wiraraja. Jayakatwang, yang merupakan keturunan Raja Kediri, melakukan perlawanan terhadap Kerajaan Singasari karena ingin mendirikan Kerajaan Kediri kembali.Dalam perlawanannya, Jayakatwang dibantu oleh Arya Wiraraja. Akhirnya, Kerajaan ini jatuh ke tangan Jayakatwang setelah Raja Kertanegara wafatelar Sri Rajasa Sang Amurwabhumi.Tidak lama setelah kekalahan Kediri, Raden Wijaya menyerang balik tentara Mongol. Sebelum meninggalkan Jawa, pihak Mongol sempat menghukum mati Jayakatwang dan putranya Ardharaja di atas kapal mereka. Kemenangan atas Kediri dan pasukan Mongol menandai lahirnya Kerajaan Majapahit.Beberapa peninggalan kerajaan ini antara lain Candi Singasari,Candi Jawi
+            ,Candi Kidal,Candi Jago,Prasasti Gondang,Prasasti Singasari dan Arca Amoghapasa.
+            
+          </p>
+
+    </section>
+        <hr  color="orange">
+        <hr  color="orange">
+         <hr  color="orange">
+      <!--Bagian bagian section berisi kritik karya seni-->
+       <section class="about" id="Produ">
+      <div class="section__container about__container">
+        <div class="about__image">
+          <img src="../Gambar web/amogapasha.png" alt="about" />
+        </div>
+        <div class="about__content">
+          <h2 class="section__header"><b>Kritik Seni Arca Amogapasha</b></h2>
+          <p class="section__description">1. Deskripsi<br>
+Judul: Amogapasha<br>
+Tahun: Karya ini diperkirakan berasal dari abad ke-9 hingga ke-11 Masehi, pada periode seni India Klasik.<br>
+
+Seniman: Identitas seniman spesifik sering kali tidak diketahui dalam seni tradisional, karena banyak karya seni berasal dari workshop atau kelompok seniman.<br>
+
+Teknik: Arca ini dibuat dengan teknik pahat (sculpture) dari batu atau logam (biasanya perunggu atau tembaga dalam beberapa varian).<br>
+
+Bahan: Batu, perunggu, atau tembaga.<br></p>
+
+
+<p>2. Analisis Formal<br>
+
+Objek: Arca Amogapasha menggambarkan dewa Amogapasha, yang dikenal dalam agama Buddha dan Hindu. Amogapasha adalah salah satu aspek dari Avalokiteshvara (Bodhisattva belas kasih), dengan simbol pengendalian kekayaan spiritual dan duniawi. Biasanya, arca ini menampilkan dewa yang memegang tali atau jala, simbol dari kemampuan untuk "menangkap" atau mengendalikan energi atau kekuatan tertentu.<br>
+
+Warna: Warna pada arca ini bervariasi tergantung pada bahan yang digunakan. Jika terbuat dari batu, arca ini mungkin memiliki warna alami seperti abu-abu atau coklat; sedangkan jika terbuat dari logam seperti perunggu, ia memiliki rona hijau kekuningan atau keemasan, sering kali dipolitur atau dipoles untuk memberikan kilau.<br>
+
+Bentuk: Arca ini biasanya memiliki bentuk tubuh yang proporsional dengan pengaruh gaya klasik India. Wajah dewa sering kali diukir dengan ekspresi lembut dan penuh belas kasih, sedangkan pose tubuhnya mengandung simbolisme mendalam. Salah satu ciri khasnya adalah posisi tangan yang memegang tali atau jala, serta kaki yang tegap dengan postur yang tenang.<br>
+
+Komposisi: Komposisi dalam arca Amogapasha biasanya terfokus pada tubuh sentral dewa, dengan elemen dekoratif seperti ukiran rambut, pakaian, dan perhiasan yang menambah kesan kesakralan. Biasanya, posisi tangan dan tubuh disusun simetris atau seimbang untuk menciptakan harmoni visual.<br></p>
+
+
+<p>3. Interpretasi<br>
+
+Makna: Arca Amogapasha memiliki makna religius dan spiritual. Dalam ajaran Buddha, Amogapasha adalah Bodhisattva yang terkait dengan kemampuan untuk mengendalikan atau menaklukkan segala sesuatu, termasuk keinginan duniawi, kebodohan, dan bahkan karma buruk. Tali yang dipegangnya melambangkan ikatan atau kontrol yang bisa digunakan untuk "menarik" jiwa-jiwa menuju keselamatan atau pencerahan.<br>
+
+Simbol: Tali atau jala yang dipegang oleh dewa ini melambangkan kekuatan spiritual untuk menarik atau mengikat hal-hal yang tidak tampak, termasuk kebajikan dan kebijaksanaan. Dalam konteks lebih luas, Amogapasha juga berhubungan dengan kemakmuran dan perlindungan, terutama dalam kebudayaan Hindu dan Buddha.<br>
+
+Maksud Pembuatan Karya: Pembuatan arca ini bertujuan untuk memberikan penghormatan kepada Amogapasha sebagai simbol kekuatan yang lebih tinggi dan memberikan rasa ketenangan bagi pemuja yang datang untuk berdoa atau bermeditasi. Arca ini juga berfungsi sebagai media visual untuk membimbing umat dalam memahami ajaran spiritual yang mendalam melalui bentuk fisik.<br></p>
+
+
+<p>4. Evaluasi<br>
+
+Penilaian Positif:
+
+Arca Amogapasha adalah contoh seni religius yang sangat baik, dengan kesan mendalam yang mengundang penghormatan dan rasa kagum. Karya ini menunjukkan keterampilan tinggi dalam teknik pahatan yang sangat detail. Penggunaan bahan seperti batu atau logam memungkinkan patung ini bertahan lama, menjadi bagian dari warisan budaya.<br></p>
+  
+          </p>
+
+    </section>
+  <!--Bagian footer-->
+    <footer>
+      <div class="section__container footer__container">
+        <div class="footer__col">
+          <h4>Produksi</h4>
+          <ul class="footer__links">
+            <li><a href="#">kelompok 7</a></li>
+            <li><a href="#">Anisa Yuli Astuti</a></li>
+            <li><a href="#">Fajar Sarwono</a></li>
+            <li><a href="#">Naila Larasati</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Komposisi</h4>
+          <ul class="footer__links">
+            <li><a href="#">Teks</a></li>
+            <li><a href="#">Gambar</a></li>
+            <li><a href="#">Navigasi</a></li>
+      
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Media sosial</h4>
+          <ul class="footer__links">
+            <li><a href="#">Tik-tok</a></li>
+            <li><a href="#">Instagram</a></li>
+            <li><a href="#">Twitter</a></li>
+            <li><a href="#">Facebook</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>content</h4>
+          <ul class="footer__links">
+            <li><a href="#">Whatsapp</a></li>
+            <li><a href="#">Telphone</a></li>
+            <li><a href="#">Line</a></li>
+            <li><a href="#">Telegram</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bar">
+        <p>Copyright © 2024 Web Berita Halaman 3 Kelompok 7.</p>
+
+      </div>
+    </footer>
+</body>
+</html>
