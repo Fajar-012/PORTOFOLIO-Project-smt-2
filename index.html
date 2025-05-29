@@ -101,13 +101,16 @@
   </div>
 </div>
 
-<div class="w-screen h-screen z-100 md:hidden mt[-100px]">
-  <spline-viewer
-    url="https://prod.spline.design/zXlYazSiOR4BCbsi/scene.splinecode"
-    class="w-full h-full"
-    style="width: 100vw; height: 100vh; display: block;"
-  ></spline-viewer>
+<!-- Mobile Spline Viewer (lebih penuh dan lebih rapat atas bawah) -->
+<div class="flex md:hidden w-full h-screen justify-center items-center overflow-hidden bg-black">
+  <div class="transform scale-[0.55] -translate-y-2 origin-center">
+    <spline-viewer
+      url="https://prod.spline.design/zXlYazSiOR4BCbsi/scene.splinecode"
+      style="width: 2000px; height: 1100px;"
+    ></spline-viewer>
+  </div>
 </div>
+
 
 
 
