@@ -101,12 +101,12 @@
   </div>
 </div>
 
-<!-- Mobile Spline Viewer (lebih penuh dan lebih rapat atas bawah) -->
+<!-- Mobile Spline Viewer (pastikan tampil dan responsive) -->
 <div class="flex md:hidden w-full h-screen justify-center items-center overflow-hidden bg-black">
   <div class="transform scale-[0.55] -translate-y-2 origin-center">
     <spline-viewer
       url="https://prod.spline.design/zXlYazSiOR4BCbsi/scene.splinecode"
-      style="width: 2000px; height: 1100px;"
+      style="width: 2000px; height: 700px;"
     ></spline-viewer>
   </div>
 </div>
@@ -886,6 +886,9 @@ module.exports = {
     <script>
       AOS.init();
     </script>
+    <!-- Pastikan script spline dimuat -->
+<script type="module" src="https://unpkg.com/@splinetool/viewer@1.0.63/build/spline-viewer.js"></script>
+
      <script src="portofolio/popover.js"></script>
   </body>
 </html>
